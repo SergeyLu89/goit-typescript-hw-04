@@ -10,14 +10,14 @@ type SelectedMenu ={
 
 
 type MenuSelected = {
-  selectedMenu: Partial<SelectedMenu>
+  selectedMenu: SelectedMenu;
 }
 type MenuAction = {
   onSelectedMenu:  (object: SelectedMenu) => void
 }
 
 const MenuSelectedContext = createContext<MenuSelected>({
-  selectedMenu: {},
+  selectedMenu: {id: "first" },
 });
 
 
